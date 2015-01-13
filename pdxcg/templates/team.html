@@ -1,76 +1,146 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block body_block %}
-{% load i18n sekizai_tags %}
+    {% load i18n sekizai_tags %}
 
-<section class="wrapper style1">
-<div class="container">
-<div id="content">
-<h2 style="text-align:center">{% trans "PDX Code Guild Team Members" %}</h2>
-  <div class="container">
-  <div class="row double">
+    <section class="wrapper style1">
+        <div class="container">
+            <div id="content">
+                <h2 style="text-align:center">{% trans "PDX Code Guild Team Members" %}</h2>
 
-  <section class="4u">
-    <div class="box highlight2"> <img src="{% static 'img/sheri.jpg' %}" alt="Photo of Sheri Dover" class="img-team img-thumbnail"/>
-      <h3>Sheri Dover</h3>
-      <p>Director</p>
-      <ul>
-        <li>Email:<a href="mailto:sheri@pdxcodeguild.com"> Sheri Dover (sheri@pdxcodeguild.com)</a></li>
-      </ul>
-      <p>A long-time entrepreneur, Sheri works to empower others and strengthen the Oregon economy. Businesses founded by Sheri include a public market that served as a low-barrier incubator and a coworking space that supported small businesses. Sheri's extensive volunteer work includes 3 years as an Organizer for Portland Startup Weekend and a volunteer for TiE Oregon.</p>
-    </div>
+                <div class="container">
+                    <div class="row double">
+
+                        <section class="4u">
+                            <div class="box highlight2"><img src="{% static 'img/sheri.jpg' %}"
+                                                             alt="Photo of Sheri Dover" class="img-team img-thumbnail"/>
+
+                                <h3>Sheri Dover</h3>
+
+                                <p>Director</p>
+                                <ul>
+                                    <li>Email:<a href="mailto:sheri@pdxcodeguild.com"> Sheri Dover
+                                        (sheri@pdxcodeguild.com)</a></li>
+                                </ul>
+                                <p>A long-time entrepreneur, Sheri works to empower others and strengthen the Oregon
+                                    economy. Businesses founded by Sheri include a public market that served as a
+                                    low-barrier incubator and a coworking space that supported small businesses. Sheri's
+                                    extensive volunteer work includes 3 years as an Organizer for Portland Startup
+                                    Weekend and a volunteer for TiE Oregon.</p>
+                            </div>
+                        </section>
+
+                        <section class="4u">
+                            <div class="box highlight2">
+                                <img src="{% static 'img/kevinelong.jpg' %}" alt="Photo of Kevin Long"
+                                     class="img-team img-thumbnail"/>
+
+                                <h3>Kevin Long</h3>
+
+                                <p>Instructor</p>
+                                <ul>
+                                    <li>Email:<a href="mailto:kevin@pdxcodeguild.com"> Kevin Long
+                                        (kevin@pdxcodeguild.com)</a></li>
+                                </ul>
+                                <p>Kevin Ernest Long is a Pacific NW Technology Pioneer. As an early advocate for the
+                                    software industry in Oregon, he launched the mid-Oregon branch of the Software
+                                    Association of Oregon in the early nineties while operating a computer store and
+                                    training center in Eugene. Later he went on to design products and platforms for
+                                    Concur, WeSync, Palm, Concur, UltimateBet, Iovation, Dinerware, DataMotion and
+                                    Janrain, where he applied his experience with design, internet technologies,
+                                    touch-screens, mobile-devices, banking, security and gaming technology gained from a
+                                    decade of teaching and contracting at companies like, Symantec, Intel, and Nike.</p>
+
+                                <p>His work has been featured in publications such as PC Game Programming Explorer and
+                                    Hash Animation Master Pro Series Video Training. He is currently working as
+                                    Technical Director at CMD Agency in Portland.</p>
+                            </div>
+                        </section>
+
+                        <section class="4u">
+                            <div class="box highlight2"><img src="{% static 'img/grant.jpg' %}"
+                                                             alt="Photo of Grant Holly" class="img-team img-thumbnail"/>
+
+                                <h3>Grant Holly</h3>
+
+                                <p>Instructor</p>
+                                <ul>
+                                    <li>Email:<a href="mailto:grant@pdxcodeguild.com"> Grant Holly
+                                        (grant@pdxcodeguild.com)</a></li>
+                                </ul>
+                                <p>Before coming to Code Guild, Grant worked as a technical trainer and consultant. He
+                                    has worked with big name
+                                    companies like Microsoft, HP, and Boeing, as well as small companies in the
+                                    Northwest.</p>
+
+                                <p> Grant's background has been in database development, analytics, and data
+                                    visualization. Before that, He worked at Lower Columbia College
+                                    in teaching. In the past, he's worked on developing web applications for tracking
+                                    projects, resources, and reporting.
+                                    He's also a certified Juniper Networks specialist in security. Mix in some
+                                    JavaScript, SQL, Neo4j, server
+                                    administration, Active Directory, hacking, and even some welding, and you've got
+                                    Grant.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="row double">
+                        <section class="4u">
+                            <div class="box highlight2"><img src="{% static 'img/chrisjones.jpg' %}"
+                                                             alt="Photo of Chris Jones" class="img-team img-thumbnail"/>
+
+                                <h3>Chris Jones</h3>
+
+                                <p>IT</p>
+                                <ul>
+                                    <li>Email:<a href="mailto:chris@pdxcodeguild.com"> Chris Jones
+                                        (chris@pdxcodeguild.com)</a></li>
+                                </ul>
+                                <p>Based in Portland Oregon, Christopher Jones is a freelance developer and lover of all
+                                    things tech. He has been tinkering with anything that had electricity running
+                                    through it that he could get his hands on since he was able to walk. By the age of 8
+                                    he was helping neighbors fix broken electronics in exchange for lumpia (the food of
+                                    the Gods). At the age of 12 he taught himself HTML and started on the long road of
+                                    web development addiction.</p>
+                            </div>
+                        </section>
+                        <section class="4u">
+                            <div class="box highlight2"><img src="{% static 'images/kristin.jpg' %}"
+                                                             alt="Photo of Kristin Bratland"
+                                                             class="img-team img-thumbnail"/>
+
+                                <h3>Kristin Bratland</h3>
+
+                                <p>Awesome</p>
+                                <ul>
+                                    <li>Email:<a href="mailto:kristin@pdxcodeguild.com"> Kristin Bratland
+                                        (kristin@pdxcodeguild.com)</a></li>
+                                </ul>
+                                <p>I am an aspiring full stack unicorn, learning code because it suits my love for
+                                    interdisciplinary, synergistic, ecosystem thinking. I thrive in a collaborative
+                                    environment where solving problems is a team effort and solutions for customers are
+                                    crafted in a simple, elegant and integrative manner. My polymath experience crosses
+                                    high-level project management, program design, and process re-design with an uncanny
+                                    ability to use diverse skills for strategic problem solving, process innovation, and
+                                    completing projects on time and within budget.</p>
+
+                                <p> Work is a team effort and I strive to foster partnerships, use diplomacy in
+                                    conflict resolution, and providing exceptional customer support using outstanding
+                                    professionalism and reliability. Consistently excelling in big-picture ecosystem
+                                    approach allows me to effectively improve organizations, processes and procedures,
+                                    while fostering success for my community team, stakeholders, and the
+                                    organization.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
     </section>
-
-    <section class="4u">
-    <div class="box highlight2">
-    <img src="{% static 'img/kevinelong.jpg' %}" alt="Photo of Kevin Long" class="img-team img-thumbnail"/>
-      <h3>Kevin Long</h3>
-      <p>Instructor</p>
-      <ul>
-        <li>Email:<a href="mailto:kevin@pdxcodeguild.com"> Kevin Long (kevin@pdxcodeguild.com)</a></li>
-      </ul>
-      <p>Kevin Ernest Long is a Pacific NW Technology Pioneer. As an early advocate for the software industry in Oregon, he launched the mid-Oregon branch of the Software Association of Oregon in the early nineties while operating a computer store and training center in Eugene. Later he went on to design products and platforms for Concur, WeSync, Palm, Concur, UltimateBet, Iovation, Dinerware, DataMotion and Janrain, where he applied his experience with design, internet technologies, touch-screens, mobile-devices, banking, security and gaming technology gained from a decade of teaching and contracting at companies like, Symantec, Intel, and Nike.</p>
-      <p>His work has been featured in publications such as PC Game Programming Explorer and Hash Animation Master Pro Series Video Training. He is currently working as Technical Director at CMD Agency in Portland.</p>
-    </div>
-    </section>
-
-   <section class="4u">
-    <div class="box highlight2"> <img src="{% static 'img/grant.jpg' %}" alt="Photo of Grant Holly" class="img-team img-thumbnail"/>
-      <h3>Grant Holly</h3>
-      <p>Instructor</p>
-      <ul>
-        <li>Email:<a href="mailto:grant@pdxcodeguild.com"> Grant Holly (grant@pdxcodeguild.com)</a></li>
-      </ul>
-      <p>Before coming to Code Guild, Grant worked as a technical trainer and consultant.  He has worked with big name
-          companies like Microsoft, HP, and Boeing, as well as small companies in the Northwest.</p>
-        <p> Grant's background has been in database development, analytics, and data visualization.  Before that, He worked at Lower Columbia College
-          in teaching.  In the past, he's worked on developing web applications for tracking projects, resources, and reporting.
-          He's also a certified  Juniper Networks specialist in security.  Mix in some JavaScript, SQL, Neo4j, server
-          administration, Active Directory, hacking, and even some welding, and you've got Grant.</p>
-    </div>
-    </section>
-    </div>
-    </div>
-
-
-
-    <div class="container">
-  <div class="row double">
-    <section class="4u">
-    <div class="box highlight2"> <img src="{% static 'img/chrisjones.jpg' %}" alt="Photo of Chris Jones" class="img-team img-thumbnail"/>
-      <h3>Chris Jones</h3>
-      <p>IT</p>
-      <ul>
-        <li>Email:<a href="mailto:chris@pdxcodeguild.com"> Chris Jones (chris@pdxcodeguild.com)</a></li>
-      </ul>
-      <p>Based in Portland Oregon, Christopher Jones is a freelance developer and lover of all things tech. He has been tinkering with anything that had electricity running through it that he could get his hands on since he was able to walk. By the age of 8 he was helping neighbors fix broken electronics in exchange for lumpia (the food of the Gods).  At the age of 12 he taught himself HTML and started on the long road of web development addiction.</p>
-    </div>
-    </section>
-    </div>
-    </div>
-
-
-</div>
-</div>
-</section>
 {% endblock %}

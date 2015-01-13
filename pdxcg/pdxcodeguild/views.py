@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, Context
 from django.shortcuts import render_to_response
 from django.core.mail import send_mail, BadHeaderError
-from .forms import Comment, Contact, StudentIntake, NewStudentApp
+from .forms import Comment, Contact, StudentIntakeForm, NewStudentApp
 
 
 def index(request):
@@ -66,10 +66,10 @@ def apply(request):
 def intake(request):
     context = RequestContext(request)
     if request.method == 'GET':
-        form = StudentIntake()
+        form = StudentIntakeForm()
     else:
         # A POST request: Handle Form Upload
-        form = StudentIntake(request.POST)  # Bind data from request.POST into a PostForm
+        form = StudentIntakeForm(request.POST)  # Bind data from request.POST into a PostForm
 
         # If data is valid, proceeds to create a new post and redirect the user
         if form.is_valid():
@@ -78,6 +78,7 @@ def intake(request):
             git_hub = form.cleaned_data['git_hub']
             student_bio = form.cleaned_data['student_bio']
             student_goals = form.cleaned_data['student_goals']
+            form.save()
             from django.core.mail import EmailMultiAlternatives
 
             subject, from_email, to = '%s filled out the student intake form' % name, 'forms@pdxcodeguild.com', \

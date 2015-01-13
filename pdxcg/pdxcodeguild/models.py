@@ -35,3 +35,12 @@ class NewStudentApplication(models.Model):
     contact_state = models.CharField(max_length=255)
     contact_zip = models.CharField(max_length=255)
     contact_number = models.CharField(validators=[phone_regex], blank=True, max_length=15)
+
+
+class StudentIntake(models.Model):
+    name = models.CharField(max_length=255)
+    email_address = models.EmailField(max_length=255)
+    git_hub = models.URLField(max_length=255)
+    instructor_name = models.CharField(max_length=255)
+    student_bio = models.TextField(max_length=2000)
+    student_goals = models.TextField(max_length=2000)

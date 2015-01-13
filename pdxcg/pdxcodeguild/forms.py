@@ -4,8 +4,8 @@ from crispy_forms.layout import Submit
 from crispy_forms.bootstrap import InlineRadios
 from django.core.validators import RegexValidator
 from django.forms.extras.widgets import SelectDateWidget
-
-from .models import NewStudentApplication
+from captcha.fields import ReCaptchaField
+from .models import NewStudentApplication, StudentIntake
 
 
 class NewStudentApp(forms.ModelForm):
@@ -275,7 +275,7 @@ class Contact(forms.Form):
         self.helper.label_class = 'col-lg-3'
         self.helper.field_class = 'col-lg-7'
         self.helper.layout = Layout("full_name", 'email_address', 'phone_number', InlineRadios('best_contact'),
-                                    'message')
+                                    'message', 'captcha')
         self.helper.form_method = 'post'
         self.helper.add_input(Submit('submit', 'Submit'))
 
@@ -311,6 +311,10 @@ class Contact(forms.Form):
         label="What can we help you achieve?",
         required=True,
         widget=forms.Textarea
+    )
+
+    captcha = ReCaptchaField(
+        attrs={'theme': 'clean'}
     )
 
 
@@ -463,14 +467,14 @@ class Comment(forms.Form):
     )
 
 
-class StudentIntake(forms.Form):
+class StudentIntakeForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
-        super(StudentIntake, self).__init__(*args, **kwargs)
+        super(StudentIntakeForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_class = 'form-horizontal'
         self.helper.label_class = 'col-lg-3'
         self.helper.field_class = 'col-lg-7'
-        self.helper.layout = Layout('name', 'email_address', 'git_hub', 'student_bio', 'student_goals')
+        self.helper.layout = Layout('name', 'email_address', 'instructor_name', 'git_hub', 'student_bio', 'student_goals')
         self.helper.form_method = 'post'
         self.helper.add_input(Submit('submit', 'Submit'))
 
@@ -482,6 +486,12 @@ class StudentIntake(forms.Form):
 
     email_address = forms.EmailField(
         label="Email:",
+        max_length=80,
+        required=True,
+    )
+
+    instructor_name = forms.CharField(
+        label="Instructor's Name:",
         max_length=80,
         required=True,
     )
@@ -503,3 +513,6 @@ class StudentIntake(forms.Form):
         required=False,
         widget=forms.Textarea,
     )
+
+    class Meta:
+        model = StudentIntake

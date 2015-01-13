@@ -38,9 +38,9 @@ urlpatterns = patterns('',
     url(r'^ppm/$', 'pdxcodeguild.views.ppm', name='ppm'),
     url(r'^pythonquiz/$', 'pdxcodeguild.views.pythonquiz', name='pythonquiz'),
     url(r'^forum/', include('pybb.urls', namespace='pybb')),
-    url(r'^markitup/', include('markitup.urls')),
+    #url(r'^markitup/', include('markitup.urls')),
     url(r'^blog/', include('zinnia.urls', namespace='zinnia'), name='blog'),
-    (r'^comments/', include('django_comments.urls')),
+    #(r'^comments/', include('django_comments.urls')),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 
 )

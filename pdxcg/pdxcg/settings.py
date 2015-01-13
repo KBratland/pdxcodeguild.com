@@ -44,7 +44,7 @@ INSTALLED_APPS = (
     'south',
     'sekizai',
     'markdown',
-    'markitup',
+    #'markitup',
     'pybb',
     'compressor',
     'django.contrib.sitemaps',
@@ -52,9 +52,10 @@ INSTALLED_APPS = (
     'mptt',
     'zinnia_bootstrap',
     'zinnia',
+    'captcha'
 )
 
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False
 
 COMPRESS_CSS_FILTERS = ['compressor.filters.cssmin.CSSMinFilter',
     ]
@@ -142,6 +143,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 STATIC_URL = '/static/'
 
+AKISMET_API_KEY = '96824e9c0145'
+
+ZINNIA_SPAM_CHECKER_BACKENDS = (
+    'zinnia_akismet.akismet',
+)
+
+RECAPTCHA_PUBLIC_KEY = '6LcPVQATAAAAABSK0609v_qbN4GuIq-_QLKGtzMV'
+RECAPTCHA_PRIVATE_KEY = '6LcPVQATAAAAAHzUGgei6MmBfFy2zDxTZQ8nlxhX'
 try:
     from local_settings import *
 except ImportError:
